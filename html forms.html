@@ -1,0 +1,182 @@
+<html>
+<head>
+<body>
+<h1>form is used to collect user input</h1>
+<form>
+	<h3>defines one line text input field</h3>
+	firstname:<br>
+	<input type="text" name="firstname"><br>
+	lastname:<br>
+	<input type="text" name="lastname"><br>
+	
+	<input type="submit" value="submit"><br>
+	<hr>
+	
+	<h3>radio button</h3>
+	<input type="radio" name="gender" value="male">male<br>
+	<input type="radio" name="gender" value="female">female<br>
+	<input type="radio" name="gender" value="other">other<br>
+	<hr>
+	
+	<h3>color picker</h3>
+	<input type="color" name="favcolor" value="#cb3B47"><br>
+	<hr>
+	
+	<h3>choose date and with min &max values</h3>
+	<input type="date" name="bday"><br>
+	 
+	 <input type="date" name="bday" max="1979-12-30"><br>
+	 
+	 <input type="date" name="bday" min="15-12-2001"><br>
+	 <hr>
+	 
+	 <h3>local country time</h3>
+	 <input type="datetime-local" name="bdaytime"><br>
+	 <hr>
+	 
+	 <h3>for email address</h3>
+	 <input type="email" name="email" ><br>
+	 <input type="submit" value="submit"><br>
+	 <hr>
+	 
+	 <h3>file picker</h3>
+	 <input type="file" name="myfile"><br>
+	 <hr>
+	 
+	 <h3>to select a month</h3>
+	 <input type="month" name="bdaymonth"><br>
+	 <hr>
+	 
+	 <h3>defines numeric input field</h3>
+	 <input type="number" name="quantity" min="1" max="5">
+	 <hr>
+	 
+	 <h3>this field is disabled</h3>
+	 <input type="text" disabled><br>
+	 <hr>
+	 
+	 <h3>defines range</h3>
+	 <input type="range" name="points" min="0" max="10"> 
+	 <hr>
+	 
+	 <h3>used for search field</h3>
+	 <input type="search" name="googlesearch"><br>
+	 <hr>
+	 
+	 <h3>telephone number</h3>
+	 <input type="tel" name="usertel"><br>
+	 <hr>
+	 
+	 <h3>only time</h3>
+	 <input type="time" name="usr-time"><br>
+	 <hr>
+	 
+	 <h3>u have to enter the valid url</h3>
+	 <input type="url" name="homepage">
+	 <hr>
+	
+	 <h3>only week</h3>
+	 <input type="week" name="year-week"><br>
+	 <hr>
+	 
+	 <h3>defines the action performed when form is submitted</h3>
+	 <form action="www.cherry.com" method="post"><br>
+	 <hr>
+	 
+	 <h3>defines a drop down list</h3>
+	 <select name="cars" size="4" multiple>
+		<option value="volvo">volvo</option>
+		<option value="benz" selected>benz</option>
+		<option value="audi">audi</option>
+		<option value="lancer">lancer</option>
+	</select>
+	<hr>
+	
+	<h3>In text area we can write any thing</h3>
+	<textarea name="message" rows="10" cols="30">The car was playing in the garden</textarea>
+	<hr>
+	
+	<h3>click the button</h3>
+	<button type="button" onclick="alert('hello world')">click me!</button>
+	<hr>
+	
+	<h3>regular expressions</h3>
+	<input type="text" name="country-code" pattern="[A-Za-z]{3}" title="three letter country code"><br>
+	<hr>
+	
+	<h3>a simple value of format</h3>
+	<input type="text" name="fname" placeholder="firstname"><br>
+	<hr>
+	
+	<!--<h3>this field is required</h3>
+	 <input type="text" name="firstname" required><br>
+	 <input type="submit" value="submit"><br>
+	 <hr>-->
+	 
+	<h3>increment the step number</h3>
+	<input type="number" name="points" step="4"><br>
+	<hr>
+	
+	<h3>specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</h3>
+	<form action="/action_page.php">
+		First name: <input type="text" name="fname"><br>
+		Last name: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit as normal">
+		<input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+	</form>
+	<hr>
+	 
+	<h3>It specifies that the form-data (input) should not be validated when submitted</h3>
+	<form action="/action_page.php" novalidate>
+		firstname <input type="text" name="fname">
+				<input type="submit">
+	</form><br>
+	<hr>
+	
+	<h3>(form encoding type)The formenctype attribute specifies how the form-data should be encoded when submitting it to the server (only for forms with method="post")</h3>
+	<form action="/action_page_binary.asp" method="post">
+		First name: <input type="text" name="fname"><br>
+		<input type="submit" value="Submit">
+		<input type="submit" formenctype="multipart/form-data" value="Submit as Multipart/form-data">
+	</form><br>
+	<hr>
+	
+	<h3>The formaction attribute specifies the URL of the file that will process the input control when the form is submitted.</h3>
+	<form action="/action_page.php">
+		First name: <input type="text" name="fname"><br>
+		Last name: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit"><br>
+		<input type="submit" formaction="/action_page2.php" value="Submit to another page">
+	</form><br>
+	<hr>
+	
+	<h3>The formmethod attribute defines the HTTP method for sending form-data to the action URL</h3>
+	<form action="/action_page.php" method="get">
+		First name: <input type="text" name="fname"><br>
+		Last name: <input type="text" name="lname"><br>
+		<input type="submit" value="Submit">
+		<input type="submit" formmethod="post" value="Submit using POST">
+	</form><br>
+	<hr>
+
+	<p>The datalist element specifies a list of pre-defined options for an input element.</p>
+
+    <form action="/action_page.php">
+    <input list="browsers" name="browser">
+    <datalist id="browsers">
+		<option value="Internet Explorer">
+		<option value="Firefox">
+		<option value="Chrome">
+		<option value="Opera">
+		<option value="Safari">
+	</datalist><br>
+	<hr>
+	
+	 
+	<input type="submit" value="submit"><br>
+	
+	
+	
+</body>
+</head>
+</html>
